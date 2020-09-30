@@ -4,7 +4,7 @@ var mysql = require("mysql");
       host: "localhost",
       port: 3306,
       user: "root",
-      password: "your password",
+      password: "Nathan@2015",
       database: "burgers_db"
   });
 
