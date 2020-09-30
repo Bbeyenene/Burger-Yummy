@@ -1,0 +1,18 @@
+.display {
+    border-bottom: 2px solid gray;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+pre {
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.d3 {
+    border:  2px solid lightblue;
+    margin-top: 15px;
+}
