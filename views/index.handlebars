@@ -39,11 +39,11 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center enter_section">
-			<form action="/burgers/create" method="POST">
-				<input type="text" class="form-control d3" name="burger_name" value="" id="enter_text">
+			<form name="burger" action="/burgers/create" method="POST" onsubmit="return validateOrder()">
+				<input type="text" class=" form-control form-control-lg d3" name="burger_name" value="" id="enter_text">
 				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
 			</form>
-			<p>Enter the burger you want to eat and click "Submit".</p>
+			<p>Enter and Click "Submit" to order the burger you want to eat .</p>
 		</div>
 	</div>
 </div>
