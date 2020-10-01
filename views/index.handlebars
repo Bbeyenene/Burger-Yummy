@@ -3,7 +3,7 @@
 		<div class="col-md-12 text-center d1" id="top-bar">
 			<img src="./assets/img/burger.jpg" alt="">
             <br> <br> <br>
-			<h2> Eat-Dat-Burger! </h2>
+			<h2> Eat-Da-Burger! </h2>
              <br> <br>
 		</div>
 		
@@ -15,11 +15,11 @@
 			  	{{#unless this.devoured}}
 				<div class="col-md-12 text-center display">
 
-					<pre class="ab">{{this.id}}. {{this.burger_name}}</pre>
-				
+					<p class="ab">{{this.id}}. {{this.burger_name}}</p>
+
 					<form class="devour-form button-size">
 						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						<button type="submit" class="btn btn-secondary btn-sm">Devour it!</button>
+						<button type="submit" class="btn btn-danger btn-sm">Devour it!</button>
 					</form>
 				</div>
 				{{/unless}}
