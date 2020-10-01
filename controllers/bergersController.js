@@ -22,8 +22,7 @@ router.post("/burgers/create", function(req, res) {
   burger.create(req.body.burger_name, function(result) {
     // wrapper for orm.js that using MySQL insert callback will return a log to console,
     // render back to index with handle
-    console.log(result);
-    res.redirect("/");
+      res.redirect("/");
   });
 });
 
