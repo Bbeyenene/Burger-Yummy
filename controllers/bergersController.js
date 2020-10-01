@@ -2,37 +2,32 @@ var express = require("express");
 var router = express.Router();
 var burger = require("../model/berger.js");
 
-
-// get route -> index
+// use express for the / route response  run the /burgers route 
 router.get("/", function(req, res) {
   res.redirect("/burgers");
 });
 
+//use /burgers route to render all the data from mysql to index using hundlebars
 router.get("/burgers", function(req, res) {
-  // express callback response by calling burger.selectAllBurger
   burger.all(function(burgerData) {
-    // wrapper for orm.js that using MySQL query callback will return burger_data, render to index with handlebar
     res.render("index", { burger_data: burgerData });
   });
 });
 
-// post route -> back to index
+// use the /burgers/create route to get the data submited from inputs in the browser and post it to the mysql and also redirect to the browser too
 router.post("/burgers/create", function(req, res) {
-  // takes the request object using it as input for burger.addBurger
-  burger.create(req.body.burger_name, function(result) {
-    // wrapper for orm.js that using MySQL insert callback will return a log to console,
-    // render back to index with handle
+  burger.create(req.body.burger_name, function(result) {  
       res.redirect("/");
   });
 });
 
 // put route -> back to index
+// wrapper for orm.js that using MySQL update callback will return a log to console,
+// render back to index with handle
+// Send back response and let page reload from .then in Ajax
 router.put("/burgers/:id", function(req, res) {
-  burger.update(req.params.id, function(result) {
-    // wrapper for orm.js that using MySQL update callback will return a log to console,
-    // render back to index with handle
-    console.log(result);
-    // Send back response and let page reload from .then in Ajax
+  burger.update(req.params.id, function(result) { 
+    //console.log(result);
     res.sendStatus(200);
   });
 });
