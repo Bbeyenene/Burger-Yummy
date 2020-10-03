@@ -1,5 +1,5 @@
 {
-  "name": "berger-logger",
+  "name": "mysql-sequelize-heroku",
   "version": "1.0.0",
   "description": "This is a burger yummy project.",
   "main": "server.js",
@@ -9,7 +9,8 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.12",
     "method-override": "^3.0.0",
-    "mysql": "^2.16.0"
+    "mysql": "^2.16.0",
+    "npm": "^6.14.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
