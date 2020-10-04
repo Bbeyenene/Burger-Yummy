@@ -9,7 +9,7 @@ var connection;
         host: "localhost",
         port: 3306,
         user: "root",
-        password: "Nathan@2015",
+        password: null,
         database: "burgers_db"
     });
   }
