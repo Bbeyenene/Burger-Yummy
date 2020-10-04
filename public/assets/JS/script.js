@@ -17,7 +17,6 @@ $(document).ready(function() {
 function validateOrder() {
   var burgerInput = document.forms["burger"]["burger_name"].value;
   if (burgerInput.trim() == "") {
-    alert("Please Enter Your Order Before You Submit!!");
     return false;
   }
 }
