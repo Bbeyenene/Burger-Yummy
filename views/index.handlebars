@@ -8,7 +8,7 @@
 		</div>
 
 		<!-- ////////////////////////////////////////////////////// -->
-		<div class="col-md-6 text-center d2" class="task">
+		<div class="col-md-6 text-center d2 task">
 
 			<div class="row">
 				{{#each burger_data}}
@@ -26,7 +26,7 @@
 				{{/each}}
 			</div>
 		</div>
-		<div class="col-md-6 text-center" class="task">
+		<div class="col-md-6 text-center task">
 			{{#each burger_data}}
 			{{#if this.devoured}}
 			<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>

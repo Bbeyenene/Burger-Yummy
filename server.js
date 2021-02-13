@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 var exphbs = require("express-handlebars");
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
@@ -22,5 +21,5 @@ var router = require("./controllers/bergersController.js");
 app.use(router);
 
 app.listen(PORT, function () {
-  console.log("Listening on port:%s", PORT);
+  console.log(`Listening to http://localhost:${PORT}`);
 });
